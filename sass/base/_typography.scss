@@ -1,0 +1,100 @@
+ 
+ body {
+     font-family: 'Lato', sans-serif;
+     font-weight: 400;
+     font-size: 1.6rem;
+     line-height: 1.7;
+     color: $color-grey;
+     padding: 2rem;
+     @include respons(px600) {
+         padding: 1rem;
+     }
+ }
+ 
+ 
+ .hero-text-box {
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+
+     .hero-text {
+         color: $color-white;
+         text-transform: uppercase;
+         text-align: center;
+         backface-visibility: hidden;
+         -webkit-backface-visibility: hidden;
+     }
+
+     .hero-text-main {
+         display: block;
+         font-size: 6rem;
+         letter-spacing: 3.5rem;
+         font-weight: 400;
+         animation-name: moveInRight;
+         animation-duration: 1s;
+         animation-timing-function: ease-in;
+         @include respons(px600){
+             font-size: 5rem;
+             letter-spacing: 3rem;
+         }
+         @include respons(px480) {
+             font-size: 4.5rem;
+             letter-spacing: 2rem;
+         }
+         @include respons(px380) {
+             font-size: 4rem;
+             letter-spacing: 1.5rem;
+         }
+     }
+
+     .hero-text-sub {
+         display: block;
+         font-size: 2rem;
+         letter-spacing: 1.75rem;
+         font-weight: 700;
+         animation: moveInLeft 1s ease-in;
+         -webkit-animation: moveInLeft 1s ease-in;
+         @include respons(px600) {
+             font-size: 2rem;
+             letter-spacing: 1.3rem;
+         }
+         @include respons(px480) {
+             font-size: 1.6rem;
+             letter-spacing: 1rem;
+         }
+     }
+ }
+
+ .heading-2{
+     font-size:3.5rem;
+     font-weight: 700;
+     background:linear-gradient(to right, $color1, $color3);
+     display: inline-block;
+     -webkit-background-clip: text;
+     background-clip: text;
+     color:transparent;
+     text-transform: uppercase;
+     letter-spacing: .2rem;
+     transition: all .2s;
+     @include respons(px575){
+         font-size: 3rem;
+     }
+     &:hover{
+         transform:skewY(1deg) skewX(15deg) scale(1.1);
+         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+}
+}
+
+.heading-3{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.paragraph{
+    font-size:1.6rem;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }  
+}

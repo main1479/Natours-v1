@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    @include respons(px1024){
+        font-size: 57%;
+    }
+    @include respons(px768) {
+        font-size: 53%;
+    }
+    @include respons(px575) {
+        font-size: 50%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+::selection{
+    background:$color2;
+    color:$color-white;
+}

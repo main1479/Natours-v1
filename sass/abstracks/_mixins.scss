@@ -1,0 +1,55 @@
+@mixin clearfix{
+    &::after{
+        content:'';
+        display: table;
+        clear: both;
+    }
+}
+
+
+// ============================================
+// Media query manager
+// ============================================
+
+@mixin respons($breck) {
+    @if $breck == px1800 {
+        @media only screen and (max-width:112.5em){ @content }; //  1800px+
+    }
+    @if $breck == px1200 {
+        @media only screen and (max-width:75em){ @content };  // 1200px
+    }
+    @if $breck == px900 {
+        @media only screen and (max-width:56.25em){ @content };   // 900px
+    }
+
+    @if $breck == px768 {
+        @media only screen and (max-width:48em){ @content };   // 768px
+    }
+
+    @if $breck == px600 {
+        @media only screen and (max-width:37.5em){ @content };   // 600px
+    }
+  
+    @if $breck == px575 {
+        @media only screen and (max-width:35.9375em){ @content };   // 575px
+    }
+
+    @if $breck == px480 {
+        @media only screen and (max-width:30em){ @content };   // 480px
+    }
+    @if $breck == px380 {
+        @media only screen and (max-width:23.75em){ @content };   // 380px
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
